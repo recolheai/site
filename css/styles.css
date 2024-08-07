@@ -308,12 +308,43 @@ header {
 }
 
 footer {
-    background-color: #f1f1f1;
-    padding: 10px 20px;
+    background-color: #4a6a41; 
+    color: #fff; 
     text-align: center;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
 }
 
-.linksFooter a {
+.footerLogo img {
+    width: 120px; 
+    margin-bottom: 1%;
+}
+
+.footerTxt {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.footerDest {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footerComp {
+    margin-top: 10px;
+}
+
+.footerLink {
+    color: #fff;
+    text-decoration: none;
     margin: 0 10px;
-    display: inline-block;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
+
+.footerComp span {
+    color: #fff;
 }
