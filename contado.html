@@ -1,0 +1,93 @@
+
+
+    <section class="nosso-plano">
+        <div class="content">
+            <div class="image-container">
+                <img src="img/montLixo.png" alt="Imagem de montanha com lixo">
+            </div>
+            <div class="text-container">
+                <h2>Nosso Plano</h2>
+                <p>Nas instalações de reciclagem da RecycleIt, aumentaremos a taxa de reciclagem de resíduos plásticos globais. Reduziremos o fluxo de detritos plásticos para nossos oceanos e meio ambiente, ao mesmo tempo em que diminuímos as emissões de carbono criadas por meio da nova produção de plástico.</p>
+                <p><strong>Saiba mais sobre como podemos ajudar você a reciclar seus resíduos plásticos.</strong></p>
+                <button class="cta-button">Torne-se um fornecedor</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="nossa-tecnologia">
+        <div class="content">
+            <h2>Nossa Tecnologia</h2>
+            <p>O caminho é claro: nossa tecnologia recicla mais tipos de resíduos plásticos do que nunca, reduz a poluição e aumenta a quantidade de material plástico reciclado usado para fabricar novos produtos.</p>
+            <div class="fluxograma">
+                <img src="img/fluxo.png" alt="Fluxograma do processo de reciclagem">
+            </div>
+        </div>
+    </section>
+
+
+
+    .nosso-plano, .nossa-tecnologia {
+        background-color: #06464f;
+        color: #fff;
+    }
+    
+    .nosso-plano .content {
+        display: flex;
+    }
+    
+    .nossa-tecnologia .content{
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+    }
+    
+    .image-container img {
+        width: 100%;
+        width: 600px;
+        border-radius: 15px;
+    }
+    
+    .text-container h2 {
+        font-size: 2.5em;
+        color: #00bfa5;
+        margin-bottom: 20px;
+    }
+    
+    .text-container p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        margin-left: 2rem;
+    }
+    
+    .cta-button {
+        background-color: #00bfa5;
+        color: #ffffff;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .cta-button:hover {
+        background-color: #00a693;
+    }
+    
+    .nossa-tecnologia h2 {
+        font-size: 2.5em;
+        color: #00bfa5;
+    }
+    
+    .nossa-tecnologia p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        width: 800px;
+    }
+    
+    .fluxograma img {
+        width: 800px;
+    }
