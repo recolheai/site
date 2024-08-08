@@ -5,6 +5,102 @@ header {
     color: white;
     height: 100vh;
 }
+.menu-hamburger{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   display: none;
+   margin-left: 55%;  
+}
+
+.menu-hamburguer-elements{
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-hamburguer-elements li{
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.menu-hamburguer-elements a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu-hamburguer-elements a:hover{
+    color: rgba(20,20,20,.8)
+}
+
+
+/* BOTÃO MENU HAMBURGUER */
+.menu {
+    background-color:#06464f;
+    width: 60px;
+    height: 60px;
+    margin: 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+  
+.hamburguer {
+    position: relative;
+    display: block;
+    background: #fff;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+}
+  
+.hamburguer:before,
+.hamburguer:after {
+    background: #ffff;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+  
+.hamburguer:before {
+    top: -10px;
+}
+  
+.hamburguer:after {
+    bottom: -10px;
+}
+input {
+    display: none;
+}
+
+/* rotação dos elementos do span */
+input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+  
+input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+input:checked ~ .menu-hamburguer-elements{
+    left: 0;
+}
 
 .logo img {
     height: 40%;
@@ -49,18 +145,18 @@ header {
 .fundo {
     text-align: center;
     padding: 14% 20px;
-    max-width: 600px;
+    width: 40rem;
     margin: 0 auto;
 }
 
 .fundo h1 {
     font-size: 3.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .fundo p {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .videoBtn {
@@ -94,7 +190,7 @@ header {
 
 .problemaContent h2 {
     font-size: 2.6em;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     margin-top: 10rem;
 }
 
@@ -122,13 +218,13 @@ header {
     position: absolute;
     top: 50%;
     width: calc(54.3% - 5%);
-    height: calc(100% - 5%);
+    height: calc(100% + 5%);
     transform: translate3D(-50%, -50%, 0) scale(0.96);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     transition: all .3s ease-in-out;
-    padding: 20px;
+    padding: 19px;
 }
 
 /* .estatistica:hover {
@@ -161,29 +257,24 @@ header {
 }
 
 .estatistica h3 {
-    font-size: 60px;
-    margin-bottom: 10px;
-    margin-top: 17rem;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 14rem;
     margin-left: 2rem;
     font-weight: 600;
 }
 
-.estatistica p {
-    font-size: 26px;
+.estatistica p , .esttril p {
+    font-size: 1.3rem;
     margin-left: 2rem;
 }
 
 .esttril h3 {
-    font-size: 60px;
-    margin-bottom: 10px;
-    margin-top: 12rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    margin-top: 11rem;
     margin-left: 2rem;
     font-weight: 600;
-}
-
-.esttril p {
-    font-size: 26px;
-    margin-left: 2rem;
 }
 
 /* .esttril:hover{
@@ -221,7 +312,7 @@ header {
     font-family: 'Poppins', sans-serif; 
     color: #333;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
@@ -234,7 +325,7 @@ header {
 .time h2::after {
     content: '';
     display: block;
-    width: 100px;
+    width: 3rem;
     height: 5px;
     background: #00bfa5; 
     margin: 10px auto 0;
@@ -244,18 +335,17 @@ header {
     font-size: 1.5em;
     color: #666;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 4.8rem;
 }
 
 .time p {
-    font-size: 18px;
-    margin-bottom: 40px;
+    font-size: 110%;
 }
 
 .timePessoas {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 20px;
 }
 
@@ -302,7 +392,6 @@ header {
 
 .social-icons img {
     width: 20px;
-    height: 20px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -316,23 +405,23 @@ footer {
 }
 
 .footerLogo img {
-    width: 120px; 
+    width: 8rem; 
     margin-bottom: 1%;
 }
 
 .footerTxt {
     margin: 10px;
-    font-size: 16px;
+    font-size: 100%;
 }
 
 .footerDest {
     margin: 10px 0 0;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .footerComp {
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .footerLink {
@@ -348,3 +437,443 @@ footer {
 .footerComp span {
     color: #fff;
 }
+
+@media (max-width: 1200px) { 
+.links {
+    margin-left: 27%;
+}
+.estatistica{
+    padding: 16px;
+}
+.esttril{
+    padding: 17.5px;
+}
+.problemaContent{
+     width: auto;
+}
+.problemaContent h2 {
+    margin-top: 5rem;
+}
+.esttril h3 {
+    margin-top: 8rem;
+}
+/* .timePessoas {
+    flex-wrap: nowrap;
+} */
+.estatistica h3{
+    margin-top: 11.5rem;
+}}
+
+@media (max-width: 1050px) { 
+    .links {
+        margin-left: 23%;
+    }
+    .problemaContent h2 {
+        margin-top: 0rem;
+    }
+    .quatro > h3{
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .problemaContent {
+        height: 100vh;
+    }
+    .problemaContent h2 {
+        margin-top: 5rem;
+    }
+    .estatistica h3 {
+        margin-top: 8rem;
+    }
+    .esttril h3 {
+        margin-top: 5.5rem;
+    }
+}
+@media (max-width: 950px) { 
+    .problemaContent h2 {
+        margin-top: 2rem;
+    }
+    .links {
+        margin-left: 20%;
+    }
+}
+@media (max-width: 900px) { 
+    .problemaContent h2 {
+        margin-top: 5rem;
+    }
+    .problemaContent {
+        height: 120vh;
+    }
+    .links {
+        margin-left: 20%;
+    }
+}
+@media (max-width: 900px) { 
+    .problemaContent h2 {
+        margin-top: 5rem;
+    }
+    .problemaContent {
+        height: 120vh;
+        width: 75%;
+    }
+    .links {
+        margin-left: 20%;
+    }
+    .problema{
+        padding: 65px 40px;
+    }
+    .estatistica h3 {
+        margin-top: 6rem;
+        font-size: 3rem;
+    }
+    .esttril h3 {
+        margin-top: 4rem;
+        font-size: 3rem;
+    }
+    .quatro > h3{
+        font-size: 2.3rem;
+    }
+    .problemaImg img {
+        height: 20rem;
+    }
+    .estatistica{
+        padding: 13px;
+    }
+    .esttril{
+        padding: 14px;
+    }
+    .estatistica p, .esttril p {
+        font-size: 1.2rem;
+}}
+@media (max-width: 800px) { 
+    .links {
+        margin-left: 12.4%;
+    }
+    .estatistica h3 {
+        margin-top: 5.8rem;
+        font-size: 2.5rem;
+    }
+    .esttril h3 {
+        margin-top: 3.6rem;
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+    }
+    .quatro > h3{
+        font-size: 2rem;
+    }
+    .estatistica p, .esttril p {
+        font-size: 1.1rem;
+        line-height: 1.35rem;
+    }
+    .fundo {
+    width: 32rem;
+}}
+@media (max-width: 700px) { 
+    .links {
+        margin-left: 6%;
+    }
+    .problemaContent p {
+        font-size: 1.3em;
+    }
+    .problemaImg img {
+        height: 15rem;
+    }
+    .estatistica h3 {
+        margin-top: 10rem;
+        font-size: 3.4rem;
+    }
+    .esttril h3 {
+        margin-top: 10rem;
+        font-size: 3.4rem;
+        margin-bottom: 8px;
+    }
+    .quatro > h3{
+        font-size: 3rem;
+    }
+    .estatistica p, .esttril p {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    .colunDou {
+        display: block;
+        margin-bottom: 60%;
+    }
+    .estatistica {
+        top: 0%;
+        width: 100%;
+        height: 180%;
+        padding: 15px;
+    }
+    .colunTri{
+        display: block;
+        margin-bottom: 60%;
+        position: relative;
+        margin-bottom: 150%;
+    }
+    
+    .esttril{
+        width: 100%;
+        height: 180%;
+        padding: 15px;
+    }
+
+    .um{
+        left:50%;
+        top: 184%;
+    }
+    
+    .dois{
+        left:50%;
+    }
+    
+    .tres{
+        left:50%;
+        top: 79.8%;
+    }
+    
+    .quatro{
+        left:50%;
+        top: 264%;
+    }
+    
+    .cinco{
+        left:50%;
+        top: 449%;
+    }
+    .timePessoas {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) { 
+    .problemaImg{
+        display: none;
+    }
+    .problemaContent {
+        height: 120vh;
+        width: 100%;
+    }
+    .links > li , button{
+        display: none
+    }
+    .estatistica h3 {
+        margin-top: 6rem;
+    }
+    .esttril h3 {
+        margin-top: 6rem;
+    }
+    .menu-hamburguer-elements a:hover{
+        color:#4a6a41;
+    }
+    
+    .menu-hamburger{
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-self: flex-start;
+        overflow: auto;
+        z-index: 1;
+        color: white
+    }
+
+    .menu-hamburguer-elements{
+        width: 60%;
+        height: 100%;
+        background-color: rgba(10,10,10,.9);
+        position: fixed;
+        left: -60%;
+        top: 0;
+    
+        transition: left cubic-bezier(1,0,0,1) .8s;
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+        z-index: -1;
+    }
+
+    .menu{
+        display: flex;
+        height: 60px;
+        width: 60px;
+    }
+
+    .fundo {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 650px){
+    .colunTri{
+        display: block;
+        margin-bottom: 60%;
+        position: relative;
+        margin-bottom: 250%;
+    }
+    .esttril{
+        padding: 15px;
+        height: 250%;
+    }
+
+    .estatistica {
+        margin-bottom: 100%;
+        height: 250%;
+    }
+    .um{
+        left:50%;
+        top: 258%;
+        z-index: 1;
+    }
+    
+    .dois{
+        left:50%;
+    }
+    
+    .tres{
+        left:50%;
+        top: 226%;
+        z-index: 0;
+    }
+    
+    .quatro{
+        left:50%;
+        top: 480%;
+    }
+    
+    .cinco{
+        left:50%;
+        top: 735%;
+    }
+}
+
+@media (max-width: 470px){
+    .menu-hamburger{
+       margin-left: 46%;  
+    }
+    .fundo {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 400px){
+    .menu-hamburger{
+       margin-left: 36%;  
+    }
+    .fundo {
+        width: 16rem;
+    }
+    .problemaContent h2 {
+        margin-top: 0rem;
+    }
+    .esttril h3 {
+        margin-top: 4rem;
+        font-size: 2.8rem;
+        margin-bottom: 8px;
+    }
+    .quatro > h3{
+        font-size: 2.3rem;
+    }
+    .estatistica p, .esttril p {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    .estatistica h3 {
+        margin-top: 4rem;
+        font-size: 2.8rem;
+    }
+    .problema{
+        height: 140vh;
+    }
+}
+
+@media (max-width: 330px){
+    .menu-hamburger{
+        margin-left: 23%;  
+     }
+     .problema{
+        height: 160vh;
+    }
+    .esttril h3 {
+        margin-top: 3rem;
+        font-size: 2.6rem;
+        margin-bottom: 8px;
+    }
+    .quatro > h3{
+        font-size: 2.3rem;
+    }
+    .estatistica p, .esttril p {
+        font-size: 1.2rem;
+    }
+    .estatistica h3 {
+        margin-top: 3rem;
+        font-size: 2.6rem;
+    }
+
+    .fundo {
+        width: 16rem;
+    }
+    .problemaContent h2 {
+        margin-top: -5rem;
+    }
+
+    .fundo p {
+        font-size: 1.1em
+    }
+    .fundo h1 {
+        font-size: 3rem;
+    }
+    .fundo {
+        width: 13rem;
+    }
+}
+
+@media (max-width: 330px){
+    .menu-hamburger{
+        margin-left: 16%;  
+     }
+     .quatro > h3{
+        font-size: 1rem;
+    }
+    .estatistica p, .esttril p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    .estatistica h3 {
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+    .esttril h3 {
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 300px){
+    .problemaContent p {
+        font-size: 1.25em;
+    }
+    .problemaContent {
+        height: 160vh;
+        margin-top: 5rem;
+    }
+    .menu-hamburger{
+        margin-left: 14%;  
+     }
+}
+
+@media (max-width: 300px){
+    .menu-hamburger{
+        margin-left: 0%;  
+     }
+     .problemaContent p {
+        font-size: 1.2em;
+    }
+    .problemaContent {
+        height: 160vh;
+        margin-top: 8rem;
+    }
+}
+
